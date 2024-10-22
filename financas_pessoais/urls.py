@@ -22,4 +22,5 @@ from webapp import views
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", views.pagina_inicial),
+    path("cadastrar_conta", views.cadastrar_conta),
 ]
