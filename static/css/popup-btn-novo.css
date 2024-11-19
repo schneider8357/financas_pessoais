@@ -1,0 +1,55 @@
+/* Estilo geral do popup */
+#popup-btn-novo {
+    position: fixed; /* Para posicionar o popup em relação ao botão "Novo" */
+    top: 10px; /* Define a distância do topo da página */
+    left: 100px; /* Define a distância da borda esquerda */
+    background-color: #fff; /* Cor de fundo branca */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 10px; /* Espaçamento interno do popup */
+    width: 200px; /* Largura do popup */
+    z-index: 1; /* Certifica-se de que o popup aparece acima de outros elementos */
+    display: none; /* Esconde o popup por padrão */
+}
+
+    /* Lista do popup */
+    .popup-list {
+        list-style: none; /* Remove os marcadores de lista */
+        margin: 0; /* Remove margens externas da lista */
+        padding: 0; /* Remove o espaçamento interno da lista */
+    }
+
+            /*Estilizando os itens da lista*/
+            .popup-item {
+                display: flex; /* Alinha o ícone e o texto na mesma linha */
+                align-items: center; /* Centraliza verticalmente os ícones e o texto */
+                padding: 4px; /* Espaçamento interno entre os itens */
+                border-radius: 6px; /* Bordas arredondadas para os itens */
+                cursor: pointer; /* Mostra a mãozinha ao passar o mouse */
+                transition: background-color 0.3s ease; /* Suaviza a mudança de fundo ao passar o mouse */
+            }
+
+                /*Estilizando cor de fundo ao passar o mouse*/
+                .popup-item:hover {
+                    background-color: #ebe7e7; /* Cor de fundo clara ao passar o mouse */
+                }
+            
+                /*Estilizando os ícones nos ícones*/
+                .popup-icon i {
+                    margin-right: 10px;
+                }
+
+                    /*Estilizando cor dos ícones nos ícones*/
+                    .text-danger {
+                        color: #d81e31; /* Vermelho (usado para "Despesas") */
+                    }
+                    .text-success {
+                        color: #28a745; /* Verde (usado para "Receitas") */
+                    }
+                    .text-cedit-cart {
+                        color: #5a34a1;/* roxo (usado para "Despesas cartão") */
+                    }                   
+                    .text-primary {
+                        color: #007bff; /* Azul (usado para "Transferências") */
+                    }
+

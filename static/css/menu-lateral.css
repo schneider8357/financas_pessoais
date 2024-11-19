@@ -1,0 +1,111 @@
+/* Formatação do menu lateral */
+nav.menu-lateral {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 55px; /* Largura inicial (recolhido) */
+    height: 100%;
+    background-color: #2C2C2E;
+    overflow: hidden; /* Esconde os itens que ultrapassam a largura */
+    transition: width 0.4s ease; /* Transição suave ao expandir/recolher */
+    padding: 10px 0; /* Ajusta o espaçamento interno */
+    box-shadow: 3px 0 0 #000000;
+}
+
+/* Menu expandido */
+nav.menu-lateral.expandir {
+    width: 200px; /* Largura ao expandir */
+}
+
+/* botão "Novo" */
+.btn-novo {
+    display: none;
+    text-align: center;
+    margin: 10px 0;
+}
+
+#btn-novo {
+    background-color: #6f42c1; /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    border: none; /* Remove borda */
+    border-radius: 25px; /* Bordas arredondadas */
+    padding: 10px 20px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho do texto */
+    cursor: pointer; /* Mostra a mão ao passar o mouse */
+    display: flex; /* Para alinhar ícone e texto */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    gap: 10px; /* Espaço entre o ícone e o texto */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
+    transition: background-color 0.3s ease; /* Transição suave */
+    margin-left: 20px;
+}
+
+#btn-novo:hover {
+    background-color: #5a34a1; /* Cor ao passar o mouse */
+}
+
+/* Exibir botão quando o menu estiver expandido */
+nav.menu-lateral.expandir .btn-novo {
+    display: block; /* Torna o botão visível */
+}
+
+/* Lista de itens do menu */
+.list-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Coloca os itens em coluna */
+    align-items: flex-start; /* Alinha os itens ao lado esquerdo */
+}
+
+/* Estilo dos links do menu */
+.item-menu > a {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente o ícone e o texto */
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px; /* Espaçamento interno dos links */
+    width: 100%;
+    transition: background-color 0.3s ease; /* Efeito suave ao passar o mouse */
+}
+
+/* Ícones no menu */
+.icon > i {
+    font-size: 24px; /* Tamanho dos ícones */
+    margin-right: 15px; /* Espaço entre o ícone e o texto */
+    flex-shrink: 0; /* Evita que o ícone seja redimensionado */
+}
+
+/* Texto do menu */
+.txt-link {
+    opacity: 0; /* Esconde o texto quando o menu está recolhido */
+    white-space: nowrap; /* Impede quebra de linha */
+    overflow: hidden; /* Evita vazamentos de texto */
+    transition: opacity 0.4s ease; /* Aparecimento suave */
+}
+
+nav.menu-lateral.expandir .txt-link {
+    opacity: 1; /* Mostra o texto quando o menu está expandido */
+}
+
+/* Estilo ao passar o mouse no item */
+.item-menu:hover {
+    background-color: #38383a;
+}
+
+ul li.item-menu.ativo {
+    background-color: #38383a; /* Cor de fundo do item ativo */
+    color: #fff; /* Cor do texto do item ativo */
+    transition: background-color 0.3s ease; /* Efeito suave */
+}
+
+
+/* Ícone do botão de expansão */
+.btn-expandir > i {
+    font-size: 20px;
+    color: #fff;
+    margin-left: 20px; /* Margem para alinhar no menu recolhido */
+    cursor: pointer;
+}

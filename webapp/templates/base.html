@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index - Controle Financeiro</title>
+    <!-- Link https://icons.getbootstrap.com/?q=lis#usage para importar icones-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="{% static 'css/menu-lateral.css' %}">
+    <link rel="stylesheet" href="{% static 'css/body.css' %}">
+    <link rel="stylesheet" href="{% static 'css/popup-btn-novo.css' %}">
+
+</head>
+
+<body>
+    <!-- menu-lateral -->
+    <nav class="menu-lateral">
+        <div class="btn-expandir">
+            <i id="btn-exp" class="bi bi-list"></i>
+        </div>
+        <!-- Botão "Novo" -->
+        <div class="btn-novo">
+            <button id="btn-novo">
+                <i class="bi bi-plus-lg"></i>
+                <span class="txt-btn-novo">Novo</span>
+            </button>
+        </div>
+        <!-- popup-btn-novo -->
+        <div id="popup-btn-novo">
+            <ul class="popup-list">
+                <li class="popup-item">
+                    <span class="popup-icon"><i class="bi bi-arrow-down text-danger"></i></span>
+                    <span class="popup-txt">Despesas</span>
+                </li>
+                <li class="popup-item">
+                    <span class="popup-icon"><i class="bi bi-arrow-up text-success"></i></i></span>
+                    <span class="popup-txt">Receitas</span>
+                </li>
+                <li class="popup-item">
+                    <span class="popup-icon"><i class="bi bi-credit-card text-cedit-cart"></i></span>
+                    <span class="popup-txt">Despesas cartão</span>
+                </li>
+                <li class="popup-item">
+                    <span class="popup-icon"><i class="bi bi-arrow-left-right text-primary"></i></span>
+                    <span class="popup-txt">Transferências</span>
+                </li>
+            </ul>
+        </div>
+        <!-- Lista de menus -->
+        <ul class="list-menu">
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icon"><i class="bi bi-speedometer2"></i></span>
+                    <span class="txt-link">Dashboard</span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icon"><i class="bi bi-arrow-up-circle-fill"></i></span>
+                    <span class="txt-link">Entradas</span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icon"><i class="bi bi-arrow-down-circle-fill"></i></span>
+                    <span class="txt-link">Saídas</span>
+                </a>
+            </li>
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icon"><i class="bi bi-credit-card-2-back-fill"></i></span>
+                    <span class="txt-link">Cartão de crédito</span>
+                </a>
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icon"><i class="bi bi-arrow-down-up"></i></span>
+                    <span class="txt-link">Fluxo de Caixa</span>
+                </a>
+            <li class="item-menu">
+                <a href="#">
+                    <span class="icon"><i class="bi bi-gear"></i></span>
+                    <span class="txt-link">Configurações</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <script src="{% static 'js/menu-lateral.js' %}"></script>
+    <script src="{% static 'js/popup-btn-novo.js' %}"></script>
+    <div class="content-block">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
+
+
