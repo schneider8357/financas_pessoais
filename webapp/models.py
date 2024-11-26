@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 
 
 class Conta(models.Model):
-    usuario = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
+    usuario = models.ForeignKey(User, on_delete=models.CASCADE)
     descricao = models.CharField(max_length=500)
     valor_orcado = models.DecimalField(max_digits=6, decimal_places=2)
     data_vencimento = models.DateField()

@@ -21,6 +21,7 @@ from webapp import views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", views.pagina_inicial),
+    path("", views.pagina_inicial, name="index"),
     path("cadastrar_conta", views.cadastrar_conta),
+    path("accounts/login/", views.login_view, name="login_view"),
 ]
